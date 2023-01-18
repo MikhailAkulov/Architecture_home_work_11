@@ -6,4 +6,4 @@
 
 Реализация:
 
-[PetController](https://github.com/MikhailAkulov/Architecture_home_work_10/blob/main/ClinicService/ClinicService/Controllers/PetController.cs)
+[ClinicDesctop](https://github.com/MikhailAkulov/Architecture_home_work_11/blob/main/ClinicService/ClinicDesktop/MainForm.cs)
