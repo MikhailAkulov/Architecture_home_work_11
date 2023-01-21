@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.listViewClients = new System.Windows.Forms.ListView();
-            this.buttonLoadClients = new System.Windows.Forms.Button();
             this.columnHeaderId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderSurName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderFirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPatronymic = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonLoadClients = new System.Windows.Forms.Button();
+            this.columnHeaderDocument = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderClientBirthday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listViewClients
@@ -45,37 +47,30 @@
             this.columnHeaderId,
             this.columnHeaderSurName,
             this.columnHeaderFirstName,
-            this.columnHeaderPatronymic});
+            this.columnHeaderPatronymic,
+            this.columnHeaderDocument,
+            this.columnHeaderClientBirthday});
             this.listViewClients.FullRowSelect = true;
             this.listViewClients.GridLines = true;
             this.listViewClients.HideSelection = false;
-            this.listViewClients.Location = new System.Drawing.Point(12, 12);
+            this.listViewClients.Location = new System.Drawing.Point(9, 8);
+            this.listViewClients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listViewClients.MultiSelect = false;
             this.listViewClients.Name = "listViewClients";
-            this.listViewClients.Size = new System.Drawing.Size(692, 245);
+            this.listViewClients.Size = new System.Drawing.Size(826, 157);
             this.listViewClients.TabIndex = 0;
             this.listViewClients.UseCompatibleStateImageBehavior = false;
             this.listViewClients.View = System.Windows.Forms.View.Details;
             // 
-            // buttonLoadClients
-            // 
-            this.buttonLoadClients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonLoadClients.Location = new System.Drawing.Point(585, 276);
-            this.buttonLoadClients.Name = "buttonLoadClients";
-            this.buttonLoadClients.Size = new System.Drawing.Size(119, 44);
-            this.buttonLoadClients.TabIndex = 1;
-            this.buttonLoadClients.Text = "Загрузить";
-            this.buttonLoadClients.UseVisualStyleBackColor = true;
-            this.buttonLoadClients.Click += new System.EventHandler(this.buttonLoadClients_Click);
-            // 
             // columnHeaderId
             // 
             this.columnHeaderId.Text = "#";
+            this.columnHeaderId.Width = 30;
             // 
             // columnHeaderSurName
             // 
             this.columnHeaderSurName.Text = "Фамилия";
-            this.columnHeaderSurName.Width = 200;
+            this.columnHeaderSurName.Width = 150;
             // 
             // columnHeaderFirstName
             // 
@@ -85,16 +80,39 @@
             // columnHeaderPatronymic
             // 
             this.columnHeaderPatronymic.Text = "Отчество";
-            this.columnHeaderPatronymic.Width = 200;
+            this.columnHeaderPatronymic.Width = 150;
+            // 
+            // buttonLoadClients
+            // 
+            this.buttonLoadClients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonLoadClients.Location = new System.Drawing.Point(694, 169);
+            this.buttonLoadClients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLoadClients.Name = "buttonLoadClients";
+            this.buttonLoadClients.Size = new System.Drawing.Size(141, 31);
+            this.buttonLoadClients.TabIndex = 1;
+            this.buttonLoadClients.Text = "Загрузить список клиентов";
+            this.buttonLoadClients.UseVisualStyleBackColor = true;
+            this.buttonLoadClients.Click += new System.EventHandler(this.buttonLoadClients_Click);
+            // 
+            // columnHeaderDocument
+            // 
+            this.columnHeaderDocument.Text = "Документ";
+            this.columnHeaderDocument.Width = 150;
+            // 
+            // columnHeaderClientBirthday
+            // 
+            this.columnHeaderClientBirthday.Text = "Дата рождения";
+            this.columnHeaderClientBirthday.Width = 150;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(716, 425);
+            this.ClientSize = new System.Drawing.Size(843, 668);
             this.Controls.Add(this.buttonLoadClients);
             this.Controls.Add(this.listViewClients);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Моя клиника";
@@ -110,6 +128,8 @@
         private System.Windows.Forms.ColumnHeader columnHeaderSurName;
         private System.Windows.Forms.ColumnHeader columnHeaderFirstName;
         private System.Windows.Forms.ColumnHeader columnHeaderPatronymic;
+        private System.Windows.Forms.ColumnHeader columnHeaderDocument;
+        private System.Windows.Forms.ColumnHeader columnHeaderClientBirthday;
     }
 }
 

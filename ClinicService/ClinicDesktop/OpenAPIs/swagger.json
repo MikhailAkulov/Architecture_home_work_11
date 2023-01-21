@@ -10,6 +10,7 @@
         "tags": [
           "Client"
         ],
+        "operationId": "ClientCreate",
         "requestBody": {
           "content": {
             "application/json": {
@@ -61,6 +62,7 @@
         "tags": [
           "Client"
         ],
+        "operationId": "ClientUpdate",
         "requestBody": {
           "content": {
             "application/json": {
@@ -112,6 +114,7 @@
         "tags": [
           "Client"
         ],
+        "operationId": "ClientDelete",
         "parameters": [
           {
             "name": "clientId",
@@ -154,6 +157,7 @@
         "tags": [
           "Client"
         ],
+        "operationId": "ClientGetAll",
         "responses": {
           "200": {
             "description": "Success",
@@ -192,6 +196,7 @@
         "tags": [
           "Client"
         ],
+        "operationId": "ClientGetById",
         "parameters": [
           {
             "name": "clientId",
@@ -231,6 +236,7 @@
         "tags": [
           "Consultation"
         ],
+        "operationId": "ConsultationCreate",
         "requestBody": {
           "content": {
             "application/json": {
@@ -282,6 +288,7 @@
         "tags": [
           "Consultation"
         ],
+        "operationId": "ConsultationUpdate",
         "requestBody": {
           "content": {
             "application/json": {
@@ -333,6 +340,7 @@
         "tags": [
           "Consultation"
         ],
+        "operationId": "ConsultationDelete",
         "parameters": [
           {
             "name": "consultationId",
@@ -375,6 +383,7 @@
         "tags": [
           "Consultation"
         ],
+        "operationId": "ConsultationGetAll",
         "responses": {
           "200": {
             "description": "Success",
@@ -413,6 +422,7 @@
         "tags": [
           "Consultation"
         ],
+        "operationId": "ConsultationGetById",
         "parameters": [
           {
             "name": "consultationId",
@@ -452,6 +462,7 @@
         "tags": [
           "Pet"
         ],
+        "operationId": "PetCreate",
         "requestBody": {
           "content": {
             "application/json": {
@@ -503,6 +514,7 @@
         "tags": [
           "Pet"
         ],
+        "operationId": "PetUpdate",
         "requestBody": {
           "content": {
             "application/json": {
@@ -554,6 +566,7 @@
         "tags": [
           "Pet"
         ],
+        "operationId": "PetDelete",
         "parameters": [
           {
             "name": "petId",
@@ -596,6 +609,7 @@
         "tags": [
           "Pet"
         ],
+        "operationId": "PetGetAll",
         "responses": {
           "200": {
             "description": "Success",
@@ -634,6 +648,7 @@
         "tags": [
           "Pet"
         ],
+        "operationId": "PetGetById",
         "parameters": [
           {
             "name": "petId",

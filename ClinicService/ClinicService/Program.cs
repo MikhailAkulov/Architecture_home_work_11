@@ -14,6 +14,8 @@ namespace ClinicService
 
             var builder = WebApplication.CreateBuilder(args);
 
+            // Add services to the container.
+
             //  Singleton - одиночка.
             //  Scoped - создаются заново при каждом запросе от клиента
             builder.Services.AddScoped<IClientRepository, ClientRepository>();
@@ -23,7 +25,10 @@ namespace ClinicService
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(config =>
+            {
+                config.EnableAnnotations();
+            });
 
             var app = builder.Build();
 

@@ -109,3 +109,4 @@ C:\Users\Akulo\Desktop\Geek_Brains\1_Quarter\014 Architecture\Architecture_home_
 C:\Users\Akulo\Desktop\Geek_Brains\1_Quarter\014 Architecture\Architecture_home_work_11\ClinicService\ClinicService\obj\Debug\net6.0\ClinicService.pdb
 C:\Users\Akulo\Desktop\Geek_Brains\1_Quarter\014 Architecture\Architecture_home_work_11\ClinicService\ClinicService\obj\Debug\net6.0\ClinicService.genruntimeconfig.cache
 C:\Users\Akulo\Desktop\Geek_Brains\1_Quarter\014 Architecture\Architecture_home_work_11\ClinicService\ClinicService\obj\Debug\net6.0\ref\ClinicService.dll
+C:\Users\Akulo\Desktop\Geek_Brains\1_Quarter\014 Architecture\Architecture_home_work_11\ClinicService\ClinicService\bin\Debug\net6.0\Swashbuckle.AspNetCore.Annotations.dll

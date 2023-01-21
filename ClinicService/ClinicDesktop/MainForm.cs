@@ -1,4 +1,4 @@
-﻿using ClinicServiceNamespace;
+﻿using ClinicServiceClientNamespace;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,9 +29,10 @@ namespace ClinicDesktop
 
         private void buttonLoadClients_Click(object sender, EventArgs e)
         {
-            ClinicServiceClient clinicServiceClient = new ClinicServiceClient("http://localhost:5231/", new System.Net.Http.HttpClient());
+            ClinicServiseClient clinicServiseClient = 
+                new ClinicServiseClient("http://localhost:5231/", new System.Net.Http.HttpClient());
 
-            ICollection<Client> clients = clinicServiceClient.GetAllAllAsync().Result;
+            ICollection<Client> clients = clinicServiseClient.ClientGetAllAsync().Result;   
 
             listViewClients.Items.Clear();
             foreach (Client client in clients)
@@ -49,6 +50,14 @@ namespace ClinicDesktop
                 item.SubItems.Add(new ListViewItem.ListViewSubItem()
                 {
                     Text = client.Patronymic
+                });
+                item.SubItems.Add(new ListViewItem.ListViewSubItem()
+                {
+                    Text = client.Document
+                });
+                item.SubItems.Add(new ListViewItem.ListViewSubItem()
+                {
+                    Text = client.Birthday.ToString()
                 });
 
                 listViewClients.Items.Add(item);

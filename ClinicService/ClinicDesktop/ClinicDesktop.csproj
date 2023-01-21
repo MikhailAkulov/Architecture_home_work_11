@@ -72,8 +72,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="OpenAPIs\swagger.json">
-      <Namespace>ClinicServiceNamespace</Namespace>
-      <ClassName>ClinicServiceClient</ClassName>
+      <Namespace>ClinicServiceClientNamespace</Namespace>
+      <ClassName>ClinicServiseClient</ClassName>
       <CodeGenerator>NSwagCSharp</CodeGenerator>
       <SourceUri>http://localhost:5231/swagger/v1/swagger.json</SourceUri>
     </None>
