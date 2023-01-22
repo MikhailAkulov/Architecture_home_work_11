@@ -32,7 +32,7 @@ namespace ClinicDesktop
             ClinicServiseClient clinicServiseClient = 
                 new ClinicServiseClient("http://localhost:5231/", new System.Net.Http.HttpClient());
 
-            ICollection<Client> clients = clinicServiseClient.ClientGetAllAsync().Result;   
+            ICollection<Client> clients = clinicServiseClient.ClientGetAllAsync().Result;
 
             listViewClients.Items.Clear();
             foreach (Client client in clients)
@@ -77,6 +77,68 @@ namespace ClinicDesktop
                 SurName = "Фамилия",
                 Patronymic = "Отчество",
             }).Result;
+        }
+
+        private void buttonLoadPets_Click(object sender, EventArgs e)
+        {
+            ClinicServiseClient clinicServiseClient = 
+                new ClinicServiseClient("http://localhost:5231/", new System.Net.Http.HttpClient());
+
+            ICollection<Pet> pets = clinicServiseClient.PetGetAllAsync().Result;
+
+            listViewPets.Items.Clear();
+            foreach (Pet pet in pets)
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = pet.PetId.ToString();
+                item.SubItems.Add(new ListViewItem.ListViewSubItem()
+                {
+                    Text = pet.ClientId.ToString()
+                });
+                item.SubItems.Add(new ListViewItem.ListViewSubItem()
+                {
+                    Text = pet.Name
+                });
+                item.SubItems.Add(new ListViewItem.ListViewSubItem()
+                {
+                    Text = pet.Birthday.ToString()
+                });
+                
+                listViewPets.Items.Add(item);
+            }
+        }
+
+        private void buttonLoadConsultations_Click(object sender, EventArgs e)
+        {
+            ClinicServiseClient clinicServiseClient = 
+                new ClinicServiseClient("http://localhost:5231/", new System.Net.Http.HttpClient());
+
+            ICollection<Consultation> consultations = clinicServiseClient.ConsultationGetAllAsync().Result;
+
+            listViewConsultations.Items.Clear();
+            foreach (Consultation consultation in consultations)
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = consultation.ConsultationId.ToString();
+                item.SubItems.Add(new ListViewItem.ListViewSubItem()
+                {
+                    Text = consultation.ClientId.ToString()
+                });
+                item.SubItems.Add(new ListViewItem.ListViewSubItem()
+                {
+                    Text = consultation.PetId.ToString()
+                });
+                item.SubItems.Add(new ListViewItem.ListViewSubItem()
+                {
+                    Text = consultation.ConsultationDate.ToString()
+                });
+                item.SubItems.Add(new ListViewItem.ListViewSubItem()
+                {
+                    Text = consultation.Description
+                });
+
+                listViewConsultations.Items.Add(item);
+            }
         }
     }
 }
