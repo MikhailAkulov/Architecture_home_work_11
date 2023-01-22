@@ -63,5 +63,20 @@ namespace ClinicDesktop
                 listViewClients.Items.Add(item);
             }
         }
+
+        private void buttonCreateClient_Click(object sender, EventArgs e)
+        {
+            ClinicServiseClient clinicServiseClient =
+                new ClinicServiseClient("http://localhost:5231/", new System.Net.Http.HttpClient());
+
+            int res = clinicServiseClient.ClientCreateAsync(new CreateClientRequest()
+            {
+                Birthday = DateTime.Now,
+                Document = "Документ",
+                FirstName = "Имя",
+                SurName = "Фамилия",
+                Patronymic = "Отчество",
+            }).Result;
+        }
     }
 }

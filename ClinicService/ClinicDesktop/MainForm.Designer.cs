@@ -33,9 +33,10 @@
             this.columnHeaderSurName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderFirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPatronymic = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.buttonLoadClients = new System.Windows.Forms.Button();
             this.columnHeaderDocument = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderClientBirthday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonLoadClients = new System.Windows.Forms.Button();
+            this.buttonCreateClient = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewClients
@@ -53,11 +54,10 @@
             this.listViewClients.FullRowSelect = true;
             this.listViewClients.GridLines = true;
             this.listViewClients.HideSelection = false;
-            this.listViewClients.Location = new System.Drawing.Point(9, 8);
-            this.listViewClients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listViewClients.Location = new System.Drawing.Point(12, 11);
             this.listViewClients.MultiSelect = false;
             this.listViewClients.Name = "listViewClients";
-            this.listViewClients.Size = new System.Drawing.Size(826, 157);
+            this.listViewClients.Size = new System.Drawing.Size(827, 221);
             this.listViewClients.TabIndex = 0;
             this.listViewClients.UseCompatibleStateImageBehavior = false;
             this.listViewClients.View = System.Windows.Forms.View.Details;
@@ -82,18 +82,6 @@
             this.columnHeaderPatronymic.Text = "Отчество";
             this.columnHeaderPatronymic.Width = 150;
             // 
-            // buttonLoadClients
-            // 
-            this.buttonLoadClients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonLoadClients.Location = new System.Drawing.Point(694, 169);
-            this.buttonLoadClients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonLoadClients.Name = "buttonLoadClients";
-            this.buttonLoadClients.Size = new System.Drawing.Size(141, 31);
-            this.buttonLoadClients.TabIndex = 1;
-            this.buttonLoadClients.Text = "Загрузить список клиентов";
-            this.buttonLoadClients.UseVisualStyleBackColor = true;
-            this.buttonLoadClients.Click += new System.EventHandler(this.buttonLoadClients_Click);
-            // 
             // columnHeaderDocument
             // 
             this.columnHeaderDocument.Text = "Документ";
@@ -104,15 +92,38 @@
             this.columnHeaderClientBirthday.Text = "Дата рождения";
             this.columnHeaderClientBirthday.Width = 150;
             // 
+            // buttonLoadClients
+            // 
+            this.buttonLoadClients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonLoadClients.Location = new System.Drawing.Point(652, 239);
+            this.buttonLoadClients.Name = "buttonLoadClients";
+            this.buttonLoadClients.Size = new System.Drawing.Size(188, 44);
+            this.buttonLoadClients.TabIndex = 1;
+            this.buttonLoadClients.Text = "Загрузить список клиентов";
+            this.buttonLoadClients.UseVisualStyleBackColor = true;
+            this.buttonLoadClients.Click += new System.EventHandler(this.buttonLoadClients_Click);
+            // 
+            // buttonCreateClient
+            // 
+            this.buttonCreateClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCreateClient.Location = new System.Drawing.Point(458, 241);
+            this.buttonCreateClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCreateClient.Name = "buttonCreateClient";
+            this.buttonCreateClient.Size = new System.Drawing.Size(188, 42);
+            this.buttonCreateClient.TabIndex = 2;
+            this.buttonCreateClient.Text = "Создать нового клиента";
+            this.buttonCreateClient.UseVisualStyleBackColor = true;
+            this.buttonCreateClient.Click += new System.EventHandler(this.buttonCreateClient_Click);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(843, 668);
+            this.ClientSize = new System.Drawing.Size(851, 946);
+            this.Controls.Add(this.buttonCreateClient);
             this.Controls.Add(this.buttonLoadClients);
             this.Controls.Add(this.listViewClients);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Моя клиника";
@@ -130,6 +141,7 @@
         private System.Windows.Forms.ColumnHeader columnHeaderPatronymic;
         private System.Windows.Forms.ColumnHeader columnHeaderDocument;
         private System.Windows.Forms.ColumnHeader columnHeaderClientBirthday;
+        private System.Windows.Forms.Button buttonCreateClient;
     }
 }
 
