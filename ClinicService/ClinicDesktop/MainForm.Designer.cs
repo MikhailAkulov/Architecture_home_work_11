@@ -81,7 +81,7 @@
             this.listViewClients.Location = new System.Drawing.Point(12, 12);
             this.listViewClients.MultiSelect = false;
             this.listViewClients.Name = "listViewClients";
-            this.listViewClients.Size = new System.Drawing.Size(786, 240);
+            this.listViewClients.Size = new System.Drawing.Size(790, 240);
             this.listViewClients.TabIndex = 0;
             this.listViewClients.UseCompatibleStateImageBehavior = false;
             this.listViewClients.View = System.Windows.Forms.View.Details;
@@ -155,7 +155,7 @@
             this.listViewPets.Location = new System.Drawing.Point(12, 310);
             this.listViewPets.MultiSelect = false;
             this.listViewPets.Name = "listViewPets";
-            this.listViewPets.Size = new System.Drawing.Size(786, 241);
+            this.listViewPets.Size = new System.Drawing.Size(790, 241);
             this.listViewPets.TabIndex = 3;
             this.listViewPets.UseCompatibleStateImageBehavior = false;
             this.listViewPets.View = System.Windows.Forms.View.Details;
@@ -208,7 +208,7 @@
             this.listViewConsultations.Location = new System.Drawing.Point(12, 607);
             this.listViewConsultations.MultiSelect = false;
             this.listViewConsultations.Name = "listViewConsultations";
-            this.listViewConsultations.Size = new System.Drawing.Size(788, 241);
+            this.listViewConsultations.Size = new System.Drawing.Size(792, 241);
             this.listViewConsultations.TabIndex = 5;
             this.listViewConsultations.UseCompatibleStateImageBehavior = false;
             this.listViewConsultations.View = System.Windows.Forms.View.Details;
@@ -258,6 +258,7 @@
             this.buttonShowClient.TabIndex = 7;
             this.buttonShowClient.Text = "Показать клиента по Id";
             this.buttonShowClient.UseVisualStyleBackColor = true;
+            this.buttonShowClient.Click += new System.EventHandler(this.buttonShowClient_Click);
             // 
             // buttonUpdateClient
             // 
@@ -268,6 +269,7 @@
             this.buttonUpdateClient.TabIndex = 8;
             this.buttonUpdateClient.Text = "Редактировать запись клиента";
             this.buttonUpdateClient.UseVisualStyleBackColor = true;
+            this.buttonUpdateClient.Click += new System.EventHandler(this.buttonUpdateClient_Click);
             // 
             // buttonDeleteClient
             // 
@@ -278,6 +280,7 @@
             this.buttonDeleteClient.TabIndex = 9;
             this.buttonDeleteClient.Text = "Удалить клиента";
             this.buttonDeleteClient.UseVisualStyleBackColor = true;
+            this.buttonDeleteClient.Click += new System.EventHandler(this.buttonDeleteClient_Click);
             // 
             // buttonCreatePet
             // 
@@ -288,6 +291,7 @@
             this.buttonCreatePet.TabIndex = 10;
             this.buttonCreatePet.Text = "Создать нового питомца";
             this.buttonCreatePet.UseVisualStyleBackColor = true;
+            this.buttonCreatePet.Click += new System.EventHandler(this.buttonCreatePet_Click);
             // 
             // buttonShowPet
             // 
@@ -298,6 +302,7 @@
             this.buttonShowPet.TabIndex = 11;
             this.buttonShowPet.Text = "Показать питомца по Id";
             this.buttonShowPet.UseVisualStyleBackColor = true;
+            this.buttonShowPet.Click += new System.EventHandler(this.buttonShowPet_Click);
             // 
             // buttonUpdatePet
             // 
@@ -308,6 +313,7 @@
             this.buttonUpdatePet.TabIndex = 12;
             this.buttonUpdatePet.Text = "Редактировать запись питомца";
             this.buttonUpdatePet.UseVisualStyleBackColor = true;
+            this.buttonUpdatePet.Click += new System.EventHandler(this.buttonUpdatePet_Click);
             // 
             // buttonDeletePet
             // 
@@ -318,6 +324,7 @@
             this.buttonDeletePet.TabIndex = 13;
             this.buttonDeletePet.Text = "Удалить питомца";
             this.buttonDeletePet.UseVisualStyleBackColor = true;
+            this.buttonDeletePet.Click += new System.EventHandler(this.buttonDeletePet_Click);
             // 
             // buttonCreateConsultation
             // 
@@ -328,6 +335,7 @@
             this.buttonCreateConsultation.TabIndex = 14;
             this.buttonCreateConsultation.Text = "Создать новую консультацию";
             this.buttonCreateConsultation.UseVisualStyleBackColor = true;
+            this.buttonCreateConsultation.Click += new System.EventHandler(this.buttonCreateConsultation_Click);
             // 
             // buttonShowConsultation
             // 
@@ -338,6 +346,7 @@
             this.buttonShowConsultation.TabIndex = 15;
             this.buttonShowConsultation.Text = "Показать консультацию по Id";
             this.buttonShowConsultation.UseVisualStyleBackColor = true;
+            this.buttonShowConsultation.Click += new System.EventHandler(this.buttonShowConsultation_Click);
             // 
             // buttonUpdateConsultation
             // 
@@ -348,6 +357,7 @@
             this.buttonUpdateConsultation.TabIndex = 16;
             this.buttonUpdateConsultation.Text = "Редактировать консультацию";
             this.buttonUpdateConsultation.UseVisualStyleBackColor = true;
+            this.buttonUpdateConsultation.Click += new System.EventHandler(this.buttonUpdateConsultation_Click);
             // 
             // buttonDeleteConsultation
             // 
@@ -358,13 +368,14 @@
             this.buttonDeleteConsultation.TabIndex = 17;
             this.buttonDeleteConsultation.Text = "Удалить консультацию";
             this.buttonDeleteConsultation.UseVisualStyleBackColor = true;
+            this.buttonDeleteConsultation.Click += new System.EventHandler(this.buttonDeleteConsultation_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(809, 901);
+            this.ClientSize = new System.Drawing.Size(813, 901);
             this.Controls.Add(this.buttonDeleteConsultation);
             this.Controls.Add(this.buttonUpdateConsultation);
             this.Controls.Add(this.buttonShowConsultation);
